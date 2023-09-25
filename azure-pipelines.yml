@@ -1,0 +1,46 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+variables:
+  global_variable: "global_variable" 
+
+trigger:
+- master
+
+stages:
+- stage: S_A
+  jobs:
+ 
+  - job: J_A1
+    pool: Azure Pipelines
+    variables:
+     job_variable1: "job_variable1"
+    steps:
+    - bash: echo "Hello, world!"
+      displayName: 'Step 1 from J_A1'
+    - bash: echo "##vso[task.setvariable variable=myOutputVar;isoutput=true]this is from job A"
+      displayName: passOutput
+  - job: J_A2
+    pool: Azure Pipelines
+    steps:
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          # Write your commands here
+          echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
+          echo 'Hello world'
+
+- stage: S_B
+  jobs:
+  - job: J_B1
+    pool: Azure Pipelines
+    steps:
+      - bash: echo "Hello, world!""
+        displayName: 'Step 1 from J_B'
+
+
+
+
