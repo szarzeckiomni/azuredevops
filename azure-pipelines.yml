@@ -9,6 +9,14 @@ variables:
 trigger:
 - master
 
+jobs:
+  - job: J_1
+    pool: Azure Pipelines
+    variables:
+     job_variable1: "job_variable1"
+    steps:
+    - bash: echo "Hello, world!"
+      displayName: 'Step 1 from J_1'
 
 stages:
 - stage: S_A
