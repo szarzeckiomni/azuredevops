@@ -2,9 +2,9 @@ resources:
   pipelines:
   - pipeline: UPSTREAM  
     source: szarzeckiomni.azuredevops
-    trigger:    
-      stages:         # This stage filter is used when evaluating conditions for 
-      - S_A # triggering your pipeline. On successful completion of all the stages
+    trigger: true  
+    #  stages:         # This stage filter is used when evaluating conditions for 
+  #    - S_A # triggering your pipeline. On successful completion of all the stages
 
 jobs: 
   - job: J_DOWNSTREAM
