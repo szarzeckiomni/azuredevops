@@ -26,7 +26,7 @@ stages:
     - bash: echo "##vso[task.setvariable variable=myOutputVar;isoutput=true]this is from job A"
       displayName: passOutput
   - job: J_A2
-    pool: Azure Pipelines
+    pool: MyAgents
     steps:
     - task: Bash@3
       inputs:
