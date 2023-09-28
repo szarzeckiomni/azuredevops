@@ -7,7 +7,7 @@ variables:
   global_variable: "global_variable" 
 
 trigger:
-- master
+- main
 
 
 stages:
@@ -44,7 +44,7 @@ stages:
   - job: J_B1
     pool: Azure Pipelines
     steps:
-      - bash: echo "Hello, world!"
+      - bash: sh ar.sh #echo "Hello, world!"
         displayName: 'Step 1 from J_B'
 
 
