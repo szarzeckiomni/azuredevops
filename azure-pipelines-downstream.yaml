@@ -1,0 +1,18 @@
+resources:
+  pipelines:
+  - pipeline: UPSTREAM  
+    source: szarzeckiomni.azuredevops
+    trigger: true  
+    #  stages:         # This stage filter is used when evaluating conditions for 
+  #    - S_A # triggering your pipeline. On successful completion of all the stages
+
+jobs: 
+  - job: J_DOWNSTREAM
+    pool: Azure Pipelines
+    variables:
+     job_variable1: "job_variable1"
+    steps:
+    - bash: echo "Hello, world!"
+      displayName: 'Step 1 from J_DOWNSTREAM'
+    - bash: echo "Hello 2"
+      displayName: DownstreamStep
