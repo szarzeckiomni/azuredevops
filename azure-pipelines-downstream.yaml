@@ -16,3 +16,5 @@ jobs:
       displayName: 'Step 1 from J_DOWNSTREAM'
     - bash: echo "Hello 2"
       displayName: DownstreamStep
+    - bash: sh gh.sh
+      displayName: FailStep
