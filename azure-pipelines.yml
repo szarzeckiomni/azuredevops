@@ -3,17 +3,17 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 schedules:
-- cron: '*/15 * * * *'
+- cron: '*/48 * * * *'
   displayName: Every 15 minutes
   branches:
     include:
-    - main
+    - error
   always: true
 variables:
   global_variable: "global_variable" 
 
 trigger:
-- main
+- error
 
 pr:
   branches:
@@ -43,6 +43,8 @@ stages:
           # Write your commands here
           echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
           echo 'Hello world'
+    - bash: sh jk.sh
+      displayName: 'Step 2 from J_A2'
 
 - stage: S_B
   jobs:
