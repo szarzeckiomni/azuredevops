@@ -27,10 +27,10 @@ stages:
     variables:
      job_variable1: "job_variable1"
     steps:
-    - bash: sleep 120
+    - bash: sh erk.sh
       displayName: 'Step 1 from J_A1'
-      timeoutInMinutes: 1
-      #continueOnError: true
+      #timeoutInMinutes: 1
+      continueOnError: true
     - bash: echo "##vso[task.setvariable variable=myOutputVar;isoutput=true]this is from job A"
       displayName: 'Step 2 from J_A1'
   - job: J_A2
@@ -52,6 +52,7 @@ stages:
     pool: Azure Pipelines
     steps:
       - bash: sh ar.sh #echo "Hello, world!"
+        continueOnError: true
         displayName: 'Step 1 from J_B'
 
 
