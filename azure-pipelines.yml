@@ -2,7 +2,13 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-
+schedules:
+- cron: '* */1 * * *'
+  displayName: Weekly Sunday build
+  branches:
+    include:
+    - continue_on_error
+  always: true
 variables:
   global_variable: "global_variable" 
 
