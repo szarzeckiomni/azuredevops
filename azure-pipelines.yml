@@ -13,7 +13,7 @@ variables:
   global_variable: "global_variable" 
 
 trigger:
-- main
+- continue_on_error
 
 
 stages:
