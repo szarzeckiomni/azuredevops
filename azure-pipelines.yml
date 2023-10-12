@@ -39,13 +39,12 @@ stages:
   #      KeyVaultName: 'KeyVaultTest00001'
   #      SecretsFilter: 'ana'
   #      RunAsPreJob: true
-    - task: ArchiveFiles@2
+    - task: DecryptFile@1
       inputs:
-        rootFolderOrFile: '$(Build.BinariesDirectory)'
-        includeRootFolder: true
-        archiveType: 'zip'
-        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-        replaceExistingArchive: true
+       cipher: 'des3'
+       inFile: 'sdsd.kl'
+       passphrase: 'sdsd'
+       outFile: './'
   - job: J_A2
     pool: Azure Pipelines
     steps:
