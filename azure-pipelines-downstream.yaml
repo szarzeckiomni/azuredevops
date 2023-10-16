@@ -8,14 +8,14 @@ resources:
 name: NowaNazwa
 jobs: 
   - job: J_DOWNSTREAM_ST
-    pool: Azure Pipelines
+    pool: MyAgents
     variables:
      job_variable1: "job_variable1"
     steps:
     - bash: echo "Hello, world!"
       displayName: 'Step 1 from J_DOWNSTREAM_ST'
   - job: J_DOWNSTREAM
-    pool: Azure Pipelines
+    pool: MyAgents
     variables:
      job_variable1: "job_variable1"
     steps:
