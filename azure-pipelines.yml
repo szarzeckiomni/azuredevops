@@ -22,7 +22,7 @@ stages:
   jobs:
  
   - job: J_A1
-    pool: Azure Pipelines
+    pool: MyAgents
     timeoutInMinutes: 1
     variables:
      job_variable1: "job_variable1"
@@ -34,7 +34,7 @@ stages:
     - bash: echo "##vso[task.setvariable variable=myOutputVar;isoutput=true]this is from job A"
       displayName: 'Step 2 from J_A1'
   - job: J_A2
-    pool: Azure Pipelines
+    pool: MyAgents
     timeoutInMinutes: 1
     steps:
     - bash: sleep 360
@@ -52,7 +52,7 @@ stages:
 - stage: S_B
   jobs:
   - job: J_B1
-    pool: Azure Pipelines
+    pool: MyAgents
     steps:
       - bash: echo "Hello"
         continueOnError: true
