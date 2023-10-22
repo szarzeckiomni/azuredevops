@@ -23,7 +23,18 @@ pr:
 stages:
 - stage: S_A
   jobs:
- 
+  - deployment: DeployWeb
+    displayName: deploy Web App
+    pool: MyAgents
+    # creates an environment if it doesn't exist
+    environment: 
+      name: 'TesEnv'
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Hello world
   - job: J_A1
     pool: MyAgents
     variables:
