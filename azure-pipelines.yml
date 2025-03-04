@@ -2,18 +2,18 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-schedules:
-- cron: '0 */3 * * *'
-  displayName: Weekly Sunday build
-  branches:
-    include:
-    - timeout_job
-  always: true
-variables:
-  global_variable: "global_variable" 
+#schedules:
+#- cron: '0 */3 * * *'
+#  displayName: Weekly Sunday build
+#  branches:
+#    include:
+#    - timeout_job
+#  always: true
+#variables:
+#  global_variable: "global_variable" 
 
-trigger:
-- timeout_job
+#trigger:
+#- timeout_job
 
 
 stages:
