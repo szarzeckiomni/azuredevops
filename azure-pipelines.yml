@@ -25,7 +25,7 @@ stages:
   jobs:
  
   - job: J_A1
-    pool: MyAgents
+    #pool: MyAgents
     variables:
      job_variable1: "job_variable1"
     steps:
@@ -49,7 +49,7 @@ stages:
 - stage: S_B
   jobs:
   - job: J_B1
-    pool: MyAgents
+    #pool: MyAgents
     steps:
       - bash: echo "Hello, world!"
         displayName: 'Step 1 from J_B'
