@@ -25,7 +25,7 @@ stages:
   jobs:
  
   - job: J_A1
-    pool: MyAgents
+    #pool: MyAgents
     variables:
      job_variable1: "job_variable1"
     steps:
