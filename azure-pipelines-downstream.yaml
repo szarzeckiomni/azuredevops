@@ -3,6 +3,8 @@ resources:
   - pipeline: UPSTREAM  
     source: szarzeckiomni.azuredevops
     trigger: true  
+pr:
+- main
     #  stages:         # This stage filter is used when evaluating conditions for 
   #    - S_A # triggering your pipeline. On successful completion of all the stages
 name: NowaNazwa
