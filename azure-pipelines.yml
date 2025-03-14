@@ -9,6 +9,10 @@
 #    include:
 #    - main
 #  always: true
+parameters:
+  - name: myParameter
+    displayName: Description of myParameter
+    default: "defaultMyParameter"
 variables:
   global_variable: "global_variable" 
 
