@@ -7,7 +7,7 @@ pr:
 - main
     #  stages:         # This stage filter is used when evaluating conditions for 
   #    - S_A # triggering your pipeline. On successful completion of all the stages
-name: NowaNazwa
+#name: NowaNazwa
 jobs: 
   - job: J_DOWNSTREAM_ST
     pool: Default
