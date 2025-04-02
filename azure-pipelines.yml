@@ -54,6 +54,7 @@ stages:
         displayName: 'Step 1 from J_B1'
       - bash: sh jk.sh
         displayName: 'Step 2 from J_B1'
+        retryCountOnTaskFailure: 5
 
 
 
